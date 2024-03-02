@@ -19,12 +19,8 @@ app.use(cookieParser());
 
 app.use("/api/blog", blogRouter);
 
-// app.use(notFound);
-// app.use(errorHandler);
-
-app.use("/", (req, res) => {
-  res.send("Hello from Server Side");
-});
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server is running at PORT ${PORT}`);
